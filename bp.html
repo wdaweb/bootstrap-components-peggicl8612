@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.使用 bootstrap 的 css -->
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            
+
+        }
+
+        .banner_1,
+        .banner_2,
+        .banner_3 {
+            width: 100%;
+            height: 100vh;   
+            object-fit: cover;
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+        }
+
+        .format_container {
+            width: auto;
+            background: rgba(185, 138, 138, 0.705);
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .format tr {
+            width: auto;
+            text-align: left;
+        }
+
+        .format td {
+            width: auto;
+            border: 1px solid #999999c5;
+        }
+
+        .submit {
+            text-align: center;
+        }
+
+
+        .author {
+            padding: 60px;
+        }
+
+        .left {
+            position: relative;
+            top: 50px;
+            left: 0;
+        }
+
+        .link {
+            position: relative;
+            left: 50px;
+            bottom: 0;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #999;
+        }
+
+        .right {
+            position: relative;
+            left: 20px;
+            top: 100px;
+        }
+
+        .author img {
+            padding: 20px;
+            width: 165px;
+            height: 165px;
+            position: relative;
+            right: 40px;
+            bottom: 40px;
+            border-radius: 50%;
+            border: 2px dashed palevioletred;
+        }
+
+        .address {
+            width: 150px;
+            height: 60px;
+            position: relative;
+            left: 230px;
+            bottom: 280px;
+            padding: 2px;
+            color: #999;
+
+        }
+
+        .contact {
+            width: 200px;
+            height: 130px;
+            position: relative;
+            left: 230px;
+            bottom: 200px;
+            padding: 2px;
+            color: #999;
+
+        }
+
+        .copyright {
+            text-align: center;
+            color: #999;
+            font-weight: bolder;
+            position: relative;
+            bottom: 60px;
+            left: 0;
+        }
+
+        @media (min-width: 992px) {
+
+            .banner_1,
+            .banner_2,
+            .banner_3 {
+                height: 100vh;
+                object-fit: cover;
+
+            }
+
+            .card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+            }
+
+
+            .format_container {
+                background: rgba(185, 138, 138, 0.705);
+            }
+
+            .format tr {
+                text-align: left;
+            }
+
+            .format td {
+                width: 600px;
+                text-align: left;
+                border: 1px solid #999999c5;
+
+            }
+
+            .submit {
+                text-align: center;
+            }
+
+            .left {
+                position: relative;
+                left: 200px;
+                bottom: -30px;
+            }
+
+            .author img {
+            padding: 20px;
+            width: 165px;
+            height: 165px;
+            position: relative;
+            right: 40px;
+            bottom: 40px;
+            border-radius: 50%;
+            border: 2px dashed palevioletred;
+        }
+
+            .link a {
+                text-decoration: none;
+                color: #999;
+            }
+
+
+            .address {
+                width: 150px;
+                height: 60px;
+                position: absolute;
+                left: 500px;
+                bottom: 302px;
+            }
+
+            .link {
+                position: absolute;
+                left: 600px;
+                top: 25px;
+                color: #999;
+
+            }
+
+            .contact {
+                width: 200px;
+                height: 130px;
+                position: relative;
+                left: 1100px;
+                bottom: 240px;
+                padding: 2px;
+                color: #999;
+            }
+
+            .footer {
+                position: relative;
+                top: 0;
+                left: 80px;
+            }
+
+            .copyright {
+                position: relative;
+                bottom: 60px;
+                left: 80px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/banner_1.jpg" class="banner_1 w-100" alt="banner_1">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/banner_2.jpg" class="banner_2 w-100" alt="banner_2">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/banner_3.jpg" class="banner_3 w-100" alt="banner_3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="card d-flex justify-content-center flex-row mt-5 gap-5">
+        <div class="card_1" style="width: 18rem;">
+            <img src="https://picsum.photos/300/200/?random=1">
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, voluptatum!</p>
+            </div>
+        </div>
+        <div class="card_2" style="width: 18rem;">
+            <img src="https://picsum.photos/300/200/?random=2">
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, commodi.</p>
+            </div>
+        </div>
+        <div class="card_3" style="width: 18rem;">
+            <img src="https://picsum.photos/300/200/?random=3">
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quasi.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 p-0">
+                <img class="img-fluid" src="./images/耶誕城1.jpg">
+            </div>
+            <div class="col-lg-6 bg-light text-dark d-lg-flex flex-lg-column justify-content-lg-center align-items-center ">
+                <h3>△耶誕開城秀：11月15日18:00△<br>主燈秀時間：每日17:30～23:00<br></h3>
+                <p>
+                    周邊燈飾亮燈時間：每日17:30～23:00 <br>
+                    遊樂設施開放時間：每日11:00～22:00
+                </p>
+                <br>
+                <button class="btn btn-dark w-25" style="margin-bottom: 40px;">VIEW COLLECTION</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 p-0 order-lg-1">
+                <img class="img-fluid" src="./images/耶誕城2.jpg">
+            </div>
+            <div class="col-lg-6 bg-light text-dark d-flex align-items-lg-center justify-content-lg-center">
+                <div>
+                    <h3>2024新北歡樂耶誕城主題
+                        <br>「魔幻之城」</h3>
+                    <p>今年的活動亮點有8大特色，並有魔幻天使帶著他的4位朋友小客（元素探索者）<br>
+                        貓頭鷹（祕法智者）、兔子（靈魂治療師）和獨角獸（聖盾守護者），<br>
+                        和大家一同遨遊充滿耶誕氛圍的魔幻世界。</p>
+                    <br>
+                    <button class="btn btn-dark w-50" style="margin-top: 0px;">VIEW COLLECTION</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28924.659885475885!2d121.43682401099362!3d25.014299199999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a98728e245df%3A0xb1c0870781733bd9!2z5p2_5qmL6LuK56uZ56uZ5YmN5buj5aC0!5e0!3m2!1szh-TW!2stw!4v1733844719787!5m2!1szh-TW!2stw"
+        class="w-100 p-0" style="border:0; height: 600px ; margin-top: 40px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="format_container mt-5">
+        <div class="title">
+            <h2>聯絡我們</h2>
+            <h4>2024新北歡樂耶誕城！會變裝的聖誕樹</h4>
+            <h6>活動日期：2024年11月15日（五）～2025年1月1日（一）</h6>
+        </div>
+
+        <form class="row g-3 mt-4  m-3">
+
+            <div class="col-12 col-lg-6">
+                <label for="name" class="form-label">姓名</label>
+                <div class="input-group">
+                    <input type="text" id="name" class="form-control" placeholder="請輸入您的姓名">
+                    <div class="input-group-text">
+                        先生 <input type="radio" name="gender" value="male">
+                    </div>
+                    <div class="input-group-text">
+                        女士 <input type="radio" name="gender" value="female">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-6">
+                <label for="phone" class="form-label">電話</label>
+                <input type="text" id="phone" class="form-control" placeholder="請輸入電話">
+            </div>
+
+            <div class="col-12 col-sm-6">
+                <label for="email" class="form-label">電子信箱</label>
+                <input type="email" id="email" class="form-control" placeholder="請輸入電子信箱">
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <label for="type" class="form-label">問題類型</label>
+                <select id="type" class="form-select">
+                    <option selected>問題類型</option>
+                    <option>交通問題</option>
+                    <option>活動方面</option>
+                    <option>意見反應</option>
+                    <option>其他問題</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <label for="message" class="form-label">意見需求</label>
+                <textarea id="message" class="form-control" rows="4" placeholder="請輸入意見或建議"></textarea>
+            </div>
+
+            <div class="form-check m-2">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    訂閱最新電子報
+                </label>
+            </div>
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-dark text-white" value="送出">送出</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="footer">
+        <div class="left">
+            <div class="author" style="width: 100px; height: 200px;"><img src="./images/作者圖.png">
+            </div>
+            <div class="link">
+                Links <br>
+                <a href="https://www.youtube.com/watch?v=P0dqfMSSqX0">Youtube</a><br>
+                <a
+                    href="https://www.cosmopolitan.com/tw/lifestyle/travel/g62781097/christmas-town-1101/">COSMOPOLITAN</a><br>
+                <a href="https://event.liontravel.com/zh-tw/trends/christmasland">liontravel</a><br>
+            </div>
+        </div>
+        <div class="right">
+            <div class="address">
+                Address<br>
+                板橋車站站前廣場
+            </div>
+            <div class="contact">
+                Contact<br>
+                Email: abc123@gmail.com <br>
+                Phone: 0800-123-456 <br>
+                FB: 「新北歡樂耶誕城」
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Copyright 2024 Peggy Lin Change．All Rights Reserved</p>
+        </div>
+    </div>
+    <!-- 2.使用 bootstrap 的 js，可以讓我們使用元件進行互動 -->
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
